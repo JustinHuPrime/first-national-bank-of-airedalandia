@@ -151,6 +151,76 @@
           "Ref": "UnauthRoleName"
         }
       }
+    },
+    "apifnba": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-fnba-dev-215329-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "Parameters": {
+          "AppSyncApiName": "fnba",
+          "DynamoDBBillingMode": "PAY_PER_REQUEST",
+          "DynamoDBEnableServerSideEncryption": false,
+          "S3DeploymentBucket": "amplify-fnba-dev-215329-deployment",
+          "S3DeploymentRootKey": "amplify-appsync-files/949b8156c61d25c2f500b469184c16c1be5d8272",
+          "env": "dev"
+        }
+      }
+    },
+    "authfnba": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-fnba-dev-215329-deployment/amplify-cfn-templates/auth/fnba-cloudformation-template.json",
+        "Parameters": {
+          "resourceNameTruncated": "fnba62bd9501",
+          "userPoolName": "fnba_userpool",
+          "autoVerifiedAttributes": "email",
+          "mfaConfiguration": "OPTIONAL",
+          "mfaTypes": "TOTP",
+          "smsAuthenticationMessage": "Your authentication code is {####}",
+          "smsVerificationMessage": "Your verification code is {####}",
+          "emailVerificationSubject": "Your verification code",
+          "emailVerificationMessage": "Your verification code is {####}",
+          "defaultPasswordPolicy": true,
+          "passwordPolicyMinLength": "12",
+          "passwordPolicyCharacters": "",
+          "requiredAttributes": "email",
+          "aliasAttributes": "",
+          "userpoolClientGenerateSecret": false,
+          "userpoolClientRefreshTokenValidity": 30,
+          "userpoolClientWriteAttributes": "email",
+          "userpoolClientReadAttributes": "email",
+          "userpoolClientLambdaRole": "fnba62bd9501_userpoolclient_lambda_role",
+          "userpoolClientSetAttributes": false,
+          "sharedId": "62bd9501",
+          "resourceName": "fnba",
+          "authSelections": "userPoolOnly",
+          "useDefault": "manual",
+          "usernameAttributes": "email",
+          "userPoolGroups": false,
+          "adminQueries": false,
+          "triggers": "{}",
+          "hostedUI": false,
+          "userPoolGroupList": "",
+          "serviceName": "Cognito",
+          "usernameCaseSensitive": false,
+          "useEnabledMfas": true,
+          "authRoleArn": {
+            "Fn::GetAtt": [
+              "AuthRole",
+              "Arn"
+            ]
+          },
+          "unauthRoleArn": {
+            "Fn::GetAtt": [
+              "UnauthRole",
+              "Arn"
+            ]
+          },
+          "breakCircularDependency": true,
+          "dependsOn": "",
+          "env": "dev"
+        }
+      }
     }
   }
 }

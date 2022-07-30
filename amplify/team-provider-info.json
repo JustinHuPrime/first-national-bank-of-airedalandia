@@ -10,6 +10,11 @@
       "StackName": "amplify-fnba-dev-215329",
       "StackId": "arn:aws:cloudformation:us-west-2:491624026173:stack/amplify-fnba-dev-215329/8ec15e30-0fc3-11ed-8522-0a47c5cc8a1f",
       "AmplifyAppId": "d1urjkouaosq6l"
+    },
+    "categories": {
+      "auth": {
+        "fnba": {}
+      }
     }
   }
 }

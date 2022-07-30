@@ -11,5 +11,73 @@
       "StackId": "arn:aws:cloudformation:us-west-2:491624026173:stack/amplify-fnba-dev-215329/8ec15e30-0fc3-11ed-8522-0a47c5cc8a1f",
       "AmplifyAppId": "d1urjkouaosq6l"
     }
+  },
+  "api": {
+    "fnba": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "kxlquagwe5f6jge2noghaoo3bu",
+        "GraphQLAPIEndpointOutput": "https://it536ytybbahpoyeyfnd5tn3oq.appsync-api.us-west-2.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-ej4labpocrbk7j6ndhubaf7w7a"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-fnba-dev-215329-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apifnba"
+      },
+      "lastPushTimeStamp": "2022-07-30T05:17:16.787Z",
+      "lastPushDirHash": "LxceoB/j9J9bJwUP1mpPksYZAE4="
+    }
+  },
+  "auth": {
+    "fnba": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": "12",
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OPTIONAL",
+        "mfaTypes": [
+          "TOTP"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-fnba-dev-215329-deployment/amplify-cfn-templates/auth/fnba-cloudformation-template.json",
+        "logicalId": "authfnba"
+      },
+      "lastPushTimeStamp": "2022-07-30T05:17:16.943Z",
+      "output": {
+        "UserPoolId": "us-west-2_pkxdb5fn2",
+        "AppClientIDWeb": "7paf7p3fi8jomf8i2lvhden3bl",
+        "AppClientID": "4tecnqf65le1kukmkfali0ohfm",
+        "UserPoolArn": "arn:aws:cognito-idp:us-west-2:491624026173:userpool/us-west-2_pkxdb5fn2",
+        "UserPoolName": "fnba_userpool"
+      },
+      "lastPushDirHash": "tn0dzhZXRreTyaXa4+7jeYZ8OhU="
+    }
   }
 }
