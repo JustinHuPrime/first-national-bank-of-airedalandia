@@ -3,10 +3,21 @@
   "serviceConfiguration": {
     "apiName": "fnba",
     "serviceName": "AppSync",
-    "gqlSchemaPath": "/home/justin/Personal/Programming/first-national-bank-of-airedalandia/amplify/backend/api/fnba/schema.graphql",
+    "gqlSchemaPath": "/tmp/amplify-6c602160-3789-440e-99ff-54793accd502/amplify/backend/api/fnba/schema.graphql",
     "defaultAuthType": {
       "mode": "API_KEY",
-      "expirationTime": 7
-    }
+      "keyDescription": "api key description",
+      "expirationTime": 30
+    },
+    "conflictResolution": {
+      "defaultResolutionStrategy": {
+        "type": "AUTOMERGE"
+      }
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "AWS_IAM"
+      }
+    ]
   }
 }

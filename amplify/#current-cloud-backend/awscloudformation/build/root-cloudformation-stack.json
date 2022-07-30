@@ -1,5 +1,5 @@
 {
-  "Description": "Root Stack for AWS Amplify CLI",
+  "Description": "Root Stack for AWS Amplify Console",
   "AWSTemplateFormatVersion": "2010-09-09",
   "Parameters": {
     "DeploymentBucketName": {
@@ -160,8 +160,14 @@
           "AppSyncApiName": "fnba",
           "DynamoDBBillingMode": "PAY_PER_REQUEST",
           "DynamoDBEnableServerSideEncryption": false,
+          "authRoleName": {
+            "Ref": "AuthRoleName"
+          },
+          "unauthRoleName": {
+            "Ref": "UnauthRoleName"
+          },
           "S3DeploymentBucket": "amplify-fnba-dev-215329-deployment",
-          "S3DeploymentRootKey": "amplify-appsync-files/949b8156c61d25c2f500b469184c16c1be5d8272",
+          "S3DeploymentRootKey": "amplify-appsync-files/773efcea4fc54f702d83b1f7edf58cbe6a75b89b",
           "env": "dev"
         }
       }

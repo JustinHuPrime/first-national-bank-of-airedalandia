@@ -1,5 +1,6 @@
 {
   "AppSyncApiName": "fnba",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
-  "DynamoDBEnableServerSideEncryption": false
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthModeLastUpdated": "2022-07-30T05:19:59.496Z"
 }

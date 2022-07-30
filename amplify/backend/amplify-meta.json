@@ -22,21 +22,26 @@
           "defaultAuthentication": {
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
-              "apiKeyExpirationDays": 7
+              "apiKeyExpirationDays": 30,
+              "description": "api key description"
             }
           },
-          "additionalAuthenticationProviders": []
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ]
         },
         "GraphQLAPIIdOutput": "kxlquagwe5f6jge2noghaoo3bu",
         "GraphQLAPIEndpointOutput": "https://it536ytybbahpoyeyfnd5tn3oq.appsync-api.us-west-2.amazonaws.com/graphql",
         "GraphQLAPIKeyOutput": "da2-ej4labpocrbk7j6ndhubaf7w7a"
       },
+      "lastPushTimeStamp": "2022-07-30T05:25:12.454Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-fnba-dev-215329-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apifnba"
       },
-      "lastPushTimeStamp": "2022-07-30T05:17:16.787Z",
-      "lastPushDirHash": "LxceoB/j9J9bJwUP1mpPksYZAE4="
+      "lastPushDirHash": "QF4lyZk4SfbfeXZZHcGisKOxI8k="
     }
   },
   "auth": {
@@ -65,11 +70,6 @@
           "EMAIL"
         ]
       },
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-fnba-dev-215329-deployment/amplify-cfn-templates/auth/fnba-cloudformation-template.json",
-        "logicalId": "authfnba"
-      },
-      "lastPushTimeStamp": "2022-07-30T05:17:16.943Z",
       "output": {
         "UserPoolId": "us-west-2_pkxdb5fn2",
         "AppClientIDWeb": "7paf7p3fi8jomf8i2lvhden3bl",
@@ -77,7 +77,11 @@
         "UserPoolArn": "arn:aws:cognito-idp:us-west-2:491624026173:userpool/us-west-2_pkxdb5fn2",
         "UserPoolName": "fnba_userpool"
       },
-      "lastPushDirHash": "tn0dzhZXRreTyaXa4+7jeYZ8OhU="
+      "lastPushTimeStamp": "2022-07-30T05:25:12.455Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-fnba-dev-215329-deployment/amplify-cfn-templates/auth/fnba-cloudformation-template.json",
+        "logicalId": "authfnba"
+      }
     }
   }
 }
