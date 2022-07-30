@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-fnba-dev-215329-authRole",
+      "UnauthRoleArn": "arn:aws:iam::491624026173:role/amplify-fnba-dev-215329-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::491624026173:role/amplify-fnba-dev-215329-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-fnba-dev-215329-deployment",
+      "UnauthRoleName": "amplify-fnba-dev-215329-unauthRole",
+      "StackName": "amplify-fnba-dev-215329",
+      "StackId": "arn:aws:cloudformation:us-west-2:491624026173:stack/amplify-fnba-dev-215329/8ec15e30-0fc3-11ed-8522-0a47c5cc8a1f",
+      "AmplifyAppId": "d1urjkouaosq6l"
+    }
+  }
+}
